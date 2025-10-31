@@ -31,6 +31,7 @@ website made with [zola](<https://getzola.org/>) \
   <a href="https://ring.acab.dev">hacker webring</a> |
   <a href="http://ring.acab.dev/next/VolHSv9UR1">next &gt</a>
 </div>
+
 ---
 <div class="badges">
 {{ badge(src="skoovedev.png" href="https://skoove.dev") }}
