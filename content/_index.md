@@ -20,13 +20,17 @@ website made with [zola](<https://getzola.org/>) \
 [source](<https://github.com/skoove/website/>)
 
 ---
-
 <div class="webring" style="text-align: center; font-weight: bold">
-  <a href="https://shring.sh/skoove/previous">&lt last</a> |
+  <a href="https://shring.sh/skoove/previous">&lt prev</a> |
   <a href="https://shring.sh">shring</a> |
   <a href="https://shring.sh/skoove/next">next &gt</a>
 </div>
 
+<div class="webring" style="text-align: center; font-weight: bold">
+  <a href="http://ring.acab.dev/prev/VolHSv9UR1">&lt prev</a> |
+  <a href="https://ring.acab.dev">hacker webring</a> |
+  <a href="http://ring.acab.dev/next/VolHSv9UR1">next &gt</a>
+</div>
 ---
 <div class="badges">
 {{ badge(src="skoovedev.png" href="https://skoove.dev") }}
