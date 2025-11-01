@@ -28,8 +28,14 @@ website made with [zola](<https://getzola.org/>) \
 
 <div class="webring" style="text-align: center; font-weight: bold">
   <a href="http://ring.acab.dev/prev/VolHSv9UR1">&lt prev</a> |
-  <a href="https://ring.acab.dev">hacker webring</a> |
+  <a href="https://ring.acab.dev">hacker</a> |
   <a href="http://ring.acab.dev/next/VolHSv9UR1">next &gt</a>
+</div>
+
+<div class="webring" style="text-align: center; font-weight: bold">
+  <a href="https://baccyflap.com/noai/?prv&s=sko">&lt prev</a> |
+  <a href="https://baccyflap.com/noai">noai</a> |
+  <a href="https://baccyflap.com/noai/?nxt&s=sko">next &gt</a>
 </div>
 
 ---
