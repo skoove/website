@@ -27,6 +27,12 @@ website made with [zola](<https://getzola.org/>) \
 </div>
 
 <div class="webring" style="text-align: center; font-weight: bold">
+  <a href="https://teethinvitro.neocities.org/webring/linuxring/redirect/skooveprev.html">&lt prev</a> |
+  <a href="https://teethinvitro.neocities.org/webring/linuxring">*nixRing</a> |
+  <a href="https://teethinvitro.neocities.org/webring/linuxring/redirect/skoovenext.html">next &gt</a>
+</div>
+
+<div class="webring" style="text-align: center; font-weight: bold">
   <a href="http://ring.acab.dev/prev/VolHSv9UR1">&lt prev</a> |
   <a href="https://ring.acab.dev">hacker</a> |
   <a href="http://ring.acab.dev/next/VolHSv9UR1">next &gt</a>
