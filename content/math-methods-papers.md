@@ -5,6 +5,8 @@ title = "math methods leaks"
 
 ### stop looking for the leaks and lock in, the leaks are almost definitely not real.
 
+### you are wasting time looking, just study, it sucks, your exhausted, but it will do you more good than trying to chase something that is not real
+
 ## resources
 - <https://mathsvideosaustralia.com/>
   really good videos, good for if you forgot a specific topic
