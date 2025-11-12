@@ -11,7 +11,7 @@ title = "math methods leaks"
 - <https://mathsvideosaustralia.com/>
   really good videos, good for if you forgot a specific topic
 
-- <https://exam-insights.com/qcaa-mathematical_methods/>
+- <https://exam-insights.com/>
   although a enshittifed website full of ai slop, and clearly not even made by a human, it provides all the past exam questions with the marking scheme and a steb by step guide, great resources
 
 ## music
