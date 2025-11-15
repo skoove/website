@@ -8,7 +8,8 @@ she/her
 # links
 - email (preferrred!): [zie@skoove.dev](mailto:zie@skoove.dev)
 - matrix: [@skoove:catgirl.cloud](https://matrix.to/#/@skoove:catgirl.cloud)
-- bluesky: [skoove.bsky.social](https://bsky.app/profile/skoove.bsky.social)
+- bluesky: [skoove.dev](https://bsky.app/profile/skoove.bsky.social)
+- tangled: [skoove.dev](https://tangled.org/did:plc:ysd4fj4pssvasvzi4snrbkgx)
 - github: [skoove](https://github.com/skoove)
 
 # freinds sites
