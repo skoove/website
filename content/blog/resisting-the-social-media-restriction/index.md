@@ -3,9 +3,9 @@ title = "resisting the social media restriction"
 date = 2025-12-04
 +++
 
-On the 10th of December, many services will be required to restrict access to Australians under 16 years of age, or face punishments. This is a huge breach of anonymity, privacy, and security, as we are being asked to trust corporations with our personal documents to verify that we are over the age of 16, providing them information that can be easily sold, or used to target us with advertisements. Luckily, zero thought has been put into the implementation (if you could not tell by the privacy issues), and will be incredibly easy to circumvent.
+On the 10th of December, many services will be required to restrict access to Australians under 16 years of age, or face punishments. This is a huge breach of anonymity, privacy, and security, as we are being asked to trust corporations with our personal documents to verify that we are over the age of 16, providing them information that can be easily sold, or used to target us with advertisements. Luckily, zero thought has been put into the implementation (if you could not tell by the privacy issues), and it will be incredibly easy to circumvent.
 
-Everyone will be effected by this, this is not just for under 16s wanting to access restricted sites, this is for *anyone* who does not want server their personal data on a platter to a corporation, which I would hope is most people!
+Everyone will be affected by this, this is not just for under 16s wanting to access restricted sites, this is for *anyone* who does not want server their personal data on a platter to a corporation, which I would hope is most people!
 
 ## some terminology
 I will use some terms that could be unfamiliar to you, I will quickly explain what you need to know, and link extra resources for them.
