@@ -5,7 +5,7 @@ date = 2025-12-04
 
 On the 10th of December, many services will be required to restrict access to Australians under 16 years of age, or face punishments. This is a huge breach of anonymity, privacy, and security, as we are being asked to trust corporations with our personal documents to verify that we are over the age of 16, providing them information that can be easily sold, or used to target us with advertisements. Luckily, zero thought has been put into the implementation (if you could not tell by the privacy issues), and it will be incredibly easy to circumvent.
 
-Everyone will be affected by this, this is not just for under 16s wanting to access restricted sites, this is for *anyone* who does not want server their personal data on a platter to a corporation, which I would hope is most people!
+Everyone will be affected by this, this is not just for under 16s wanting to access restricted sites, this is for *anyone* who does not want serve their personal data on a platter to a corporation, which I would hope is most people!
 
 ## some terminology
 I will use some terms that could be unfamiliar to you, I will quickly explain what you need to know, and link extra resources for them.
@@ -18,7 +18,7 @@ A **DNS Server** is a server that tells your computer what IP address to go to w
 
 <https://en.wikipedia.org/wiki/Domain_Name_System>
 
-## what services will be effected
+## what services will be affected
 [According to the ABC](https://en.wikipedia.org/wiki/Domain_Name_System), the following services will either need to put restrictions in place, or be blocked:
 - Facebook
 - Instagram
@@ -33,7 +33,7 @@ A **DNS Server** is a server that tells your computer what IP address to go to w
 
 This list will almost certainly expand.
 
-The following services **will not** be effected
+The following services **will not** be affected
 
 - Discord
 - GitHub
