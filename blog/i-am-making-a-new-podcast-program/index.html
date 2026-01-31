@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/style.css">
+  
+  <title>skoove.dev - i am making a new podcast program</title>
+  
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://skoove.dev/rss.xml">
+  
+</head>
+
+<body>
+  <header>
+    <a href="/">
+      <h1 class="site_name">skoove.dev</h1>
+    </a>
+
+    <nav>
+      
+      <li><a href="&#x2F;blog">
+          <h1 class="nav_button">blog</h1>
+        </a></li>
+      
+      <li><a href="&#x2F;about">
+          <h1 class="nav_button">about</h1>
+        </a></li>
+      
+      <li><a href="&#x2F;now">
+          <h1 class="nav_button">now</h1>
+        </a></li>
+      
+    </nav>
+  </header>
+  <hr>
+
+  <section class="section">
+    <div class="container">
+      
+<h1 class="title">
+  i am making a new podcast program
+</h1>
+<nav class="page-nav">
+  
+  <a class="next-page" href="https:&#x2F;&#x2F;skoove.dev&#x2F;blog&#x2F;how-i-made-the-psx-style-doughnut&#x2F;">&lt how i made the psx style doughnut</a>
+  
+  
+  <a class="previous-page" href="https:&#x2F;&#x2F;skoove.dev&#x2F;blog&#x2F;undersea-devlog-1&#x2F;">undersea devlog #1 &gt </a>
+  
+</nav>
+<p class="subtitle"><strong>2025-04-13</strong></p>
+<p>If you want to listen to podcasts, you have a few options: Spotify, YouTube, Apple Podcasts, or RSS. RSS is great, but it lacks the quality of life features that these other providers have. For me the biggest two things that are missing are ordering episodes in order of oldest to newest (I listen to alot of fiction podcasts) and being able to resume a podcast <em>across devices</em>.</p>
+<p>I am hoping to resolve this by making my own program that has everything <em>I</em> personally want, and maybe what alot of other people are missing. I  want it to be super easy to make a new app for any platform, and to store all of its data in easy to parse files, so its not too hard to move to a different platform if it does not work for you.</p>
+<p>The basic idea is to store two things, Your list of subscribed podcasts, weather you have watched or not watched an episode, and the point where you left an episode off.</p>
+<p>This is to just give you a better idea of what I mean, this will change.</p>
+<pre class="giallo" style="color: #EBDBB2; background-color: #282828;"><code data-lang="rust"><span class="giallo-l"><span style="color: #A89984;">#[</span><span>derive</span><span style="color: #A89984;">(</span><span style="color: #FABD2F;">Debug</span><span style="color: #A89984;">)]</span></span>
+<span class="giallo-l"><span style="color: #FB4934;">pub</span><span style="color: #FE8019;"> struct</span><span style="color: #FABD2F;"> Feed</span><span style="color: #A89984;"> {</span></span>
+<span class="giallo-l"><span style="color: #83A598;">    url</span><span style="color: #8EC07C;">:</span><span style="color: #FABD2F;"> String</span><span style="color: #A89984;">,</span></span>
+<span class="giallo-l"><span style="color: #83A598;">    name</span><span style="color: #8EC07C;">:</span><span style="color: #FABD2F;"> String</span><span style="color: #A89984;">,</span></span>
+<span class="giallo-l"><span style="color: #83A598;">    episodes</span><span style="color: #8EC07C;">:</span><span style="color: #FABD2F;"> Vec</span><span style="color: #A89984;">&lt;</span><span style="color: #FABD2F;">Episode</span><span style="color: #A89984;">&gt;,</span></span>
+<span class="giallo-l"><span style="color: #A89984;">}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #A89984;">#[</span><span>derive</span><span style="color: #A89984;">(</span><span style="color: #FABD2F;">Debug</span><span style="color: #A89984;">)]</span></span>
+<span class="giallo-l"><span style="color: #FB4934;">pub</span><span style="color: #FE8019;"> struct</span><span style="color: #FABD2F;"> Episode</span><span style="color: #A89984;"> {</span></span>
+<span class="giallo-l"><span style="color: #83A598;">    url</span><span style="color: #8EC07C;">:</span><span style="color: #FABD2F;"> String</span><span style="color: #A89984;">,</span></span>
+<span class="giallo-l"><span style="color: #83A598;">    media_url</span><span style="color: #8EC07C;">:</span><span style="color: #FABD2F;"> String</span><span style="color: #A89984;">,</span></span>
+<span class="giallo-l"><span style="color: #83A598;">    title</span><span style="color: #8EC07C;">:</span><span style="color: #FABD2F;"> String</span><span style="color: #A89984;">,</span></span>
+<span class="giallo-l"><span style="color: #83A598;">    date</span><span style="color: #8EC07C;">:</span><span style="color: #FABD2F;"> DateTime</span><span style="color: #A89984;">&lt;</span><span style="color: #FABD2F;">Utc</span><span style="color: #A89984;">&gt;,</span></span>
+<span class="giallo-l"><span style="color: #83A598;">    duration</span><span style="color: #8EC07C;">:</span><span style="color: #FABD2F;"> time</span><span style="color: #8EC07C;">::</span><span style="color: #FABD2F;">Duration</span><span style="color: #A89984;">,</span></span>
+<span class="giallo-l"><span style="color: #83A598;">    resume_time</span><span style="color: #8EC07C;">:</span><span style="color: #FABD2F;"> time</span><span style="color: #8EC07C;">::</span><span style="color: #FABD2F;">Duration</span><span style="color: #A89984;">,</span></span>
+<span class="giallo-l"><span style="color: #A89984;">}</span></span></code></pre>
+<p>Initially, I will make a tui application, and an andriod app after that, maybe later I can make a gui and ios app, but thats only if I can make those first two into a useable program.</p>
+<p>If you are intrested, take a at the repo on <a rel="external" href="https://github.com/skoove/undersea">github</a>, and considor contributing or giving it a star.</p>
+
+
+    </div>
+  </section>
+</body>
+
+</html>
