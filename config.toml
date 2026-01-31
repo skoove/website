@@ -10,7 +10,7 @@ insert_anchor_links = "heading"
 
 [markdown.highlighting]
 style = "inline"
-theme = "gruvbox-dark"
+theme = "gruvbox-dark-medium"
 
 [extra]
 nav = [
