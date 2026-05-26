@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/style.css">
+  
+  <title>skoove.dev - arma 3 on linux</title>
+  
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://skoove.dev/rss.xml">
+  
+</head>
+
+<body>
+  <header>
+    <a href="/">
+      <h1 class="site_name">skoove.dev</h1>
+    </a>
+
+    <nav>
+      
+      <li><a href="&#x2F;blog">
+          <h1 class="nav_button">blog</h1>
+        </a></li>
+      
+      <li><a href="&#x2F;about">
+          <h1 class="nav_button">about</h1>
+        </a></li>
+      
+      <li><a href="&#x2F;now">
+          <h1 class="nav_button">now</h1>
+        </a></li>
+      
+    </nav>
+  </header>
+  <hr>
+
+  <section class="section">
+    <div class="container">
+      
+<h1 class="title">
+  arma 3 on linux
+</h1>
+<nav class="page-nav">
+  
+  <a class="next-page" href="https:&#x2F;&#x2F;skoove.dev&#x2F;blog&#x2F;nix-functions&#x2F;">&lt nix functions</a>
+  
+  
+  <a class="previous-page" href="https:&#x2F;&#x2F;skoove.dev&#x2F;blog&#x2F;just-wanting-to-help&#x2F;">just wanting to help &gt </a>
+  
+</nav>
+<p class="subtitle"><strong>2025-07-27</strong></p>
+<h1 id="how-to-get-arma-3-running-on-linux-with-radio-mods"><a class="zola-anchor" href="#how-to-get-arma-3-running-on-linux-with-radio-mods" aria-label="Anchor link for: how-to-get-arma-3-running-on-linux-with-radio-mods">how to get arma 3 running on linux with radio mods</a></h1>
+<p>I use nixos, but this should work everywhere that steam can be installed.</p>
+<p>Install arma, and download the teamspeak 3 installer. Launch Arma until the launcher. Go to the mods tab and subscribe to a mod if you have not done so already, click the little arrow, then the three drops and select "Open folder in Windows Explorer". This will open a WINE explorer thing, you can launch executables that will run in the same wine instance, using the same wine server from here.</p>
+<p><img src="https://skoove.dev/blog/arma-3-on-linux/./open-in-explorer.png" alt="open in explorer" /></p>
+<p>Now, run the teamspeak 3 installer, install for all users and <strong>remember to uncheck the overwolf thing</strong>, once it finished, close Teamspeak. Now you should just be able to launch the game, and for ACERE2 at least, it will install the plugin automatically. I am unsure of what will happen if you use something else, but you can just follow it's guide for installing the plugin. To launch teamspeak again, open the explorer and run <code>C:/Program Files/TeamSpeak 3 Client/ts3client_win64.exe</code></p>
+<h2 id="bonus-performance-things"><a class="zola-anchor" href="#bonus-performance-things" aria-label="Anchor link for: bonus-performance-things">bonus performance things</a></h2>
+<p>In the arma 3 launcher, under parameters, turn on the following:</p>
+<ul>
+<li>Basic
+<ul>
+<li>Show static background in menu: true</li>
+<li>Skip logos at startup: true</li>
+<li>Force window mode: true</li>
+</ul>
+</li>
+<li>Advanced
+<ul>
+<li>Extra Threads: true
+<ul>
+<li>File operations: true</li>
+<li>Texture loading: true</li>
+<li>Geometry loading: true</li>
+</ul>
+</li>
+<li>No logs: true (this is probably really minimal on performance increase, so maybe don't bother because you may need the logs)</li>
+</ul>
+</li>
+</ul>
+<h2 id="bonus-troubleshooting-step"><a class="zola-anchor" href="#bonus-troubleshooting-step" aria-label="Anchor link for: bonus-troubleshooting-step">bonus troubleshooting step</a></h2>
+<p>The game may not lock your mouse to the window, if this is the case run <code>protontricks</code>, select Arma, select the default wine prefix, and run <code>winecfg</code>. In <code>winecfg</code> enable "automatically capture the mouse in full-screen windows". This should hopefully fix it for you, it did for me.</p>
+<p><img src="https://skoove.dev/blog/arma-3-on-linux/./winecfg.png" alt="winecfg" /></p>
+<h2 id="bonus-extra-resources"><a class="zola-anchor" href="#bonus-extra-resources" aria-label="Anchor link for: bonus-extra-resources">bonus extra resources!</a></h2>
+<ul>
+<li>Some people have had setting the game to borderless window fix the mouse exiting the window</li>
+<li><a rel="external" href="https://github.com/muttleyxd/arma3-unix-launcher">arma-3-unix-launcher</a></li>
+<li><a rel="external" href="https://github.com/sonic2kk/steamtinkerlaunch">Steam tinker launch</a> is a much better way to do this automatically, but is a bit jank so I do not tend to use it</li>
+</ul>
+
+
+    </div>
+  </section>
+</body>
+
+</html>

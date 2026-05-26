@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/style.css">
+  
+  <title>skoove.dev - resisting the social media restriction</title>
+  
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://skoove.dev/rss.xml">
+  
+</head>
+
+<body>
+  <header>
+    <a href="/">
+      <h1 class="site_name">skoove.dev</h1>
+    </a>
+
+    <nav>
+      
+      <li><a href="&#x2F;blog">
+          <h1 class="nav_button">blog</h1>
+        </a></li>
+      
+      <li><a href="&#x2F;about">
+          <h1 class="nav_button">about</h1>
+        </a></li>
+      
+      <li><a href="&#x2F;now">
+          <h1 class="nav_button">now</h1>
+        </a></li>
+      
+    </nav>
+  </header>
+  <hr>
+
+  <section class="section">
+    <div class="container">
+      
+<h1 class="title">
+  resisting the social media restriction
+</h1>
+<nav class="page-nav">
+  
+  <a class="next-page" href="https:&#x2F;&#x2F;skoove.dev&#x2F;blog&#x2F;emacs-week-1&#x2F;">&lt emacs week 1</a>
+  
+  
+</nav>
+<p class="subtitle"><strong>2025-12-04</strong></p>
+<p>On the 10th of December, many services will be required to restrict access to Australians under 16 years of age, or face punishments. This is a huge breach of anonymity, privacy, and security, as we are being asked to trust corporations with our personal documents to verify that we are over the age of 16, providing them information that can be easily sold, or used to target us with advertisements. Luckily, zero thought has been put into the implementation (if you could not tell by the privacy issues), and it will be incredibly easy to circumvent.</p>
+<p>Everyone will be affected by this, this is not just for under 16s wanting to access restricted sites, this is for <em>anyone</em> who does not want serve their personal data on a platter to a corporation, which I would hope is most people!</p>
+<h2 id="some-terminology"><a class="zola-anchor" href="#some-terminology" aria-label="Anchor link for: some-terminology">some terminology</a></h2>
+<p>I will use some terms that could be unfamiliar to you, I will quickly explain what you need to know, and link extra resources for them.</p>
+<p>An <strong>IP address</strong> is the identifier for machines on the internet, they take the form of <code>xxx.xxx.xxx.xxx</code> for IPv4 and <code>0123:4567:89:abcd:efgh:ijkl</code> for IPv6</p>
+<p><a rel="external" href="https://en.wikipedia.org/wiki/IP_address">https://en.wikipedia.org/wiki/IP_address</a></p>
+<p>A <strong>DNS Server</strong> is a server that tells your computer what IP address to go to when you put in the domain name of a service, for example, <code>example.com</code> may evaluate to <code>23.215.0.136</code>.</p>
+<p><a rel="external" href="https://en.wikipedia.org/wiki/Domain_Name_System">https://en.wikipedia.org/wiki/Domain_Name_System</a></p>
+<h2 id="what-services-will-be-affected"><a class="zola-anchor" href="#what-services-will-be-affected" aria-label="Anchor link for: what-services-will-be-affected">what services will be affected</a></h2>
+<p><a rel="external" href="https://en.wikipedia.org/wiki/Domain_Name_System">According to the ABC</a>, the following services will either need to put restrictions in place, or be blocked:</p>
+<ul>
+<li>Facebook</li>
+<li>Instagram</li>
+<li>Snapchat</li>
+<li>Threads</li>
+<li>TikTok</li>
+<li>X (Formerly Twitter)</li>
+<li>YouTube</li>
+<li>Kick</li>
+<li>Reddit</li>
+<li>Twitch</li>
+</ul>
+<p>This list will almost certainly expand.</p>
+<p>The following services <strong>will not</strong> be affected</p>
+<ul>
+<li>Discord</li>
+<li>GitHub</li>
+<li>Google Classroom</li>
+<li>LEGO Play</li>
+<li>Messenger</li>
+<li>Pinterest</li>
+<li>Roblox<sup class="footnote-reference" id="fr-roblox-1"><a href="#fn-roblox">1</a></sup></li>
+<li>Steam and Steam Chat</li>
+<li>WhatsApp</li>
+<li>YouTube Kids</li>
+<li>Linkedin</li>
+</ul>
+<h2 id="how-will-it-be-implemented"><a class="zola-anchor" href="#how-will-it-be-implemented" aria-label="Anchor link for: how-will-it-be-implemented">how will it be implemented</a></h2>
+<p>Services need to take steps to verify identities, in practice this means sending things like licences, face scans, or other info to them. If a service <em>does not</em> want to do those things, they may just block access to Australians, and if they don't want to do that, the government may take action against them, such as legal challenge, or just trying to block them using means they control.</p>
+<p>We actually have a good example, the government already blocks lots of sites! they even made us a nice list:</p>
+<p><a rel="external" href="https://www.teqsa.gov.au/blocked-illegal-cheating-websites">https://www.teqsa.gov.au/blocked-illegal-cheating-websites</a></p>
+<p>If you go to those sites, you may be redirected to that page. This is implemented using <strong>DNS blocking</strong> and is very very easily circumvented.</p>
+<h2 id="dns-blocking"><a class="zola-anchor" href="#dns-blocking" aria-label="Anchor link for: dns-blocking">DNS blocking</a></h2>
+<p>Normally, when you ask a DNS server to resolve and IP for you, it sends you the correct one, however if the government asked your ISP to block a site, it sends you to a access blocked page (for example on my phone where I have not bothered fixing this, I cant go to piracy websites).</p>
+<p>Fortunately, this is super easy to get around, just do not use your ISP's DNS server, I use <code>1.1.1.1</code> (dont put that in your browser it redirects to an ad for Cloudflares VPN, which we will get to later). Look up the instructions for your operating system, it is generally super simple.</p>
+<h2 id="geoblocking"><a class="zola-anchor" href="#geoblocking" aria-label="Anchor link for: geoblocking">geoblocking</a></h2>
+<p>Since it is on services to implement the restrictions, unless they simply don't (again, stellar planning from the government), almost all the restrictions will be done like this. Geoblocking works by trying to determine the location of your device.</p>
+<p>The first method is simply by your devices IP address, each country is assigned a range of IP addresses, so a service can just check the address, then block it, or restrict it if it is from Australia.</p>
+<p>Another method is using the ping (the time taken for a connection to reach the server from your device), ping is very predictable, so can be used to estimate the location of a device, I don't think this is use too much, but I cant be sure, you could definitely figure out if it is an Australian connected as we are so big and separated from other countries, especially if you have servers all over the world. You may have used this method yourself if you play online multiplayer games! For example if I see someone with a ping of around 70ms I know they are probably in Singapore.</p>
+<p>The least likely method is just using your devices GPS, just don't give things location permissions :P, though this could become a problem when more countries start implementing restrictions, but not yet.</p>
+<h3 id="circumventing"><a class="zola-anchor" href="#circumventing" aria-label="Anchor link for: circumventing">circumventing</a></h3>
+<p>Both the IP based blocking, and ping based can be circumvented by a VPN or a proxy. However both do put your information in the hands of potentially untrustworthy people.</p>
+<h4 id="vpn"><a class="zola-anchor" href="#vpn" aria-label="Anchor link for: vpn">VPN</a></h4>
+<p>A VPN creates a virtual network between you and some other network, in this case the wider internet, A VPN passes your traffic though their server, then to the internet, meaning both your ping and IP have changed! However some services opt to simply block VPN servers from accessing their service. As for which one to pick, just pick Mullvad, not nord, not proton, not cloudflares, just use Mullvad</p>
+<p><strong>ABSOLUTELY DO NOT USE A FREE VPN</strong></p>
+<p>You are passing <em>all</em> of your traffic to them, a free VPN service is almost definitely selling your data.</p>
+<p><a rel="external" href="https://mullvad.net/en">https://mullvad.net/en</a></p>
+<h4 id="proxies"><a class="zola-anchor" href="#proxies" aria-label="Anchor link for: proxies">proxies</a></h4>
+<p>Proxies are similar to VPNs with 2 major differences</p>
+<ol>
+<li>
+<p>You ask the proxy to make the request for you, rather than it just passing it on to the destination.</p>
+</li>
+<li>
+<p>You can probably trust proxy providers a bit less</p>
+</li>
+</ol>
+<p>If VPN services end up required to block Australia, we are left with just proxies to freely access the internet, lets hope we never get to that point</p>
+<p>My friend Alisa has a great post on setting up proxies!</p>
+<p><a rel="external" href="https://axlefublr.github.io/proxies/">https://axlefublr.github.io/proxies/</a></p>
+<p>If I made a mistake, or there is some other reason you would like to contact me, please email me!</p>
+<p><a href="mailto:zie@skoove.dev">zie@skoove.dev</a></p>
+<hr />
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn-roblox">
+<p>what the hell???? why restrict everything else but not notorious pedo haven roblox?? <a href="#fr-roblox-1">↩</a></p>
+</li>
+</ol>
+</section>
+
+
+    </div>
+  </section>
+</body>
+
+</html>
