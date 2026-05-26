@@ -75,4 +75,6 @@ website made with [zola](<https://getzola.org/>) \
 {{ badge(src="jellyfin.gif" href="https://jellyfin.org/") }}
 
 {{ badge(src="linux.gif" href="https://distrowatch.com/random.php") }}
+
+{{ badge(src="corpsedk88x31.jpg" href="https://corpsedk.nekoweb.org/" hover_text='Corpse.dks Website') }}
 <div>
